@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: A1F949A9-7AEF-41C1-B757-114421B79493
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayPathRuleConfig.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayPathRuleConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a5773d9de0a987b7304cee623a8285e582141e55
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayPathRuleConfig.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayPathRuleConfig.md
 ---
 
 # New-AzureRmApplicationGatewayPathRuleConfig
@@ -20,7 +19,8 @@ Creates an application gateway path rule.
 ```
 New-AzureRmApplicationGatewayPathRuleConfig -Name <String>
  -Paths <System.Collections.Generic.List`1[System.String]> [-BackendAddressPoolId <String>]
- [-BackendHttpSettingsId <String>] [-RedirectConfigurationId <String>] [<CommonParameters>]
+ [-BackendHttpSettingsId <String>] [-RedirectConfigurationId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -29,7 +29,8 @@ New-AzureRmApplicationGatewayPathRuleConfig -Name <String>
  -Paths <System.Collections.Generic.List`1[System.String]>
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>]
  [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
- [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>] [<CommonParameters>]
+ [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +78,7 @@ These IP addresses should either belong to the virtual network subnet or should 
 If you use this parameter you cannot use the *DefaultBackendAddressPoolId* parameter in the same command.
 
 ```yaml
-Type: PSApplicationGatewayBackendAddressPool
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -100,7 +101,7 @@ The backend address pool represents the IP addresses on the backend servers.
 These IP addresses should either belong to the virtual network subnet or should be public IP addresses.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -125,7 +126,7 @@ The backend HTTP settings configure properties such as port, protocol, and cooki
 If you use this parameter you cannot use the *DefaultBackendHttpSettingsId* parameter in the same command.
 
 ```yaml
-Type: PSApplicationGatewayBackendHttpSettings
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -148,7 +149,7 @@ The backend HTTP settings configure properties such as port, protocol, and cooki
 If you use this parameter you cannot use the *DefaultBackendHttpSettings* parameter in the same command.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -163,7 +164,7 @@ Accept wildcard characters: False
 Specifies the name of the path rule configuration that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +194,7 @@ Accept wildcard characters: False
 Application gateway RedirectConfiguration
 
 ```yaml
-Type: PSApplicationGatewayRedirectConfiguration
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -208,9 +209,22 @@ Accept wildcard characters: False
 ID of the application gateway RedirectConfiguration
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

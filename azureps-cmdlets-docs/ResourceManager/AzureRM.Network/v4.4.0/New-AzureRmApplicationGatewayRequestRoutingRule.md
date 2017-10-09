@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: 622FE9AC-1CC4-489C-BB17-9D6B9D1C151D
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayRequestRoutingRule.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayRequestRoutingRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayRequestRoutingRule.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayRequestRoutingRule.md
 ---
 
 # New-AzureRmApplicationGatewayRequestRoutingRule
@@ -20,7 +19,8 @@ Creates a request routing rule for an application gateway.
 ```
 New-AzureRmApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String>
  [-BackendHttpSettingsId <String>] [-HttpListenerId <String>] [-BackendAddressPoolId <String>]
- [-UrlPathMapId <String>] [-RedirectConfigurationId <String>] [<CommonParameters>]
+ [-UrlPathMapId <String>] [-RedirectConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -29,7 +29,8 @@ New-AzureRmApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String
  [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
  [-HttpListener <PSApplicationGatewayHttpListener>]
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
- [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>] [<CommonParameters>]
+ [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +51,7 @@ This command creates a basic request routing rule named Rule01 and stores the re
 Specifies the back-end address pool, as an object, for the request routing rule to create.
 
 ```yaml
-Type: PSApplicationGatewayBackendAddressPool
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 Specifies the back-end address pool ID of the request routing rule to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -80,7 +81,7 @@ Accept wildcard characters: False
 Specifies the back-end HTTP settings, as an object, for the request routing rule to create.
 
 ```yaml
-Type: PSApplicationGatewayBackendHttpSettings
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -95,7 +96,7 @@ Accept wildcard characters: False
 Specifies the back-end HTTP settings ID of the request routing rule to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -110,7 +111,7 @@ Accept wildcard characters: False
 Specifies the back-end HTTP listener for the request routing rule to create.
 
 ```yaml
-Type: PSApplicationGatewayHttpListener
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 Specifies the backend HTTP listener ID for the request routing rule to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -140,7 +141,7 @@ Accept wildcard characters: False
 Specifies the name of the request routing rule that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 Application gateway RedirectConfiguration
 
 ```yaml
-Type: PSApplicationGatewayRedirectConfiguration
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -170,7 +171,7 @@ Accept wildcard characters: False
 ID of the application gateway RedirectConfiguration
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -185,7 +186,7 @@ Accept wildcard characters: False
 Specifies type of the request routing rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Basic, PathBasedRouting
@@ -199,7 +200,7 @@ Accept wildcard characters: False
 
 ### -UrlPathMap
 ```yaml
-Type: PSApplicationGatewayUrlPathMap
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -212,9 +213,22 @@ Accept wildcard characters: False
 
 ### -UrlPathMapId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

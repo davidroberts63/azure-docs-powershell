@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: E066BBFA-2E03-431D-85D1-99F230B6AC59
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkInterface.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkInterface.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkInterface.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkInterface.md
 ---
 
 # Get-AzureRmNetworkInterface
@@ -18,25 +17,27 @@ Gets a network interface.
 
 ### NoExpandStandAloneNic (Default)
 ```
-Get-AzureRmNetworkInterface [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
+Get-AzureRmNetworkInterface [-Name <String>] [-ResourceGroupName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ExpandStandAloneNic
 ```
 Get-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -ExpandResource <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### NoExpandScaleSetNic
 ```
 Get-AzureRmNetworkInterface [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
- [-VirtualMachineIndex <String>] [<CommonParameters>]
+ [-VirtualMachineIndex <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ExpandScaleSetNic
 ```
 Get-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -VirtualMachineScaleSetName <String>
- -VirtualMachineIndex <String> -ExpandResource <String> [<CommonParameters>]
+ -VirtualMachineIndex <String> -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +63,7 @@ This command gets all network interfaces in the resource group named ResourceGro
 
 ### -ExpandResource
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
 Aliases: 
 
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 Specifies the name of the network interface that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandStandAloneNic, NoExpandScaleSetNic
 Aliases: 
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
 Aliases: 
 
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group from which this cmdlet gets network interfaces.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandStandAloneNic
 Aliases: 
 
@@ -116,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandStandAloneNic, NoExpandScaleSetNic, ExpandScaleSetNic
 Aliases: 
 
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 Specifies the virtual machine index of the virtual machine scale set from which this cmdlet gets network interfaces.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandScaleSetNic
 Aliases: 
 
@@ -143,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandScaleSetNic
 Aliases: 
 
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine scale set from which this cmdlet gets network interfaces.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandScaleSetNic
 Aliases: 
 
@@ -170,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandScaleSetNic
 Aliases: 
 
@@ -178,6 +179,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

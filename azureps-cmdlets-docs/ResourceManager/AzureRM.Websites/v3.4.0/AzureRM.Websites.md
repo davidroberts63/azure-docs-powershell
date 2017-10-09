@@ -4,9 +4,8 @@ Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
 Download Help Link:
 Help Version: 1
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f7f29b15e0bc098c9b84fcc5b1ba8341e7594873
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
 ---
 
 # AzureRM.Websites Module

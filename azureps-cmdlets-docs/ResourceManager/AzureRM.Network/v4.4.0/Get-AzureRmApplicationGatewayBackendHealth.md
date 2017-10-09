@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: D5E928C3-26B6-4B7C-8A9C-F1F602BABF75
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayBackendHealth.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayBackendHealth.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayBackendHealth.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayBackendHealth.md
 ---
 
 # Get-AzureRmApplicationGatewayBackendHealth
@@ -18,7 +17,7 @@ Gets application gateway backend health.
 
 ```
 Get-AzureRmApplicationGatewayBackendHealth -Name <String> -ResourceGroupName <String>
- [-ExpandResource <String>] [<CommonParameters>]
+ [-ExpandResource <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,6 +27,8 @@ The Get-AzureRmApplicationGatewayBackendHealth cmdlet gets application gateway b
 
 ### --------------------------  Example 1: Gets backend health without expanded resources.  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -66,6 +67,8 @@ This command gets the backend health of application gateway named ApplicationGat
 
 
 
+
+
 ```
 PS C:\>$BackendHealth = Get-AzureRmApplicationGatewayBackendHealth -Name ApplicationGateway01 -ResourceGroupName ResourceGroup01 -ExpandResource "backendhealth/applicationgatewayresource"
 ```
@@ -76,7 +79,7 @@ This command gets the backend health (with expanded resources) of application ga
 
 ### -ExpandResource
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +94,7 @@ Accept wildcard characters: False
 Specifies the name of the application gateway that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -106,7 +109,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the application gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,6 +117,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

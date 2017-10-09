@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: 06DAD751-3A43-4EF6-94C5-AA7AC1A67FC8
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmVirtualNetworkPeering.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmVirtualNetworkPeering.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/711009dfe02614b8160b93c3f7271b2036ffa1ad
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmVirtualNetworkPeering.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmVirtualNetworkPeering.md
 ---
 
 # Set-AzureRmVirtualNetworkPeering
@@ -17,7 +16,8 @@ Configures a virtual network peering.
 ## SYNTAX
 
 ```
-Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering <PSVirtualNetworkPeering> [<CommonParameters>]
+Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering <PSVirtualNetworkPeering>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +84,7 @@ This property cannot be used if a gateway has already been configured.
 Specifies the virtual network peering.
 
 ```yaml
-Type: PSVirtualNetworkPeering
+Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,6 +92,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

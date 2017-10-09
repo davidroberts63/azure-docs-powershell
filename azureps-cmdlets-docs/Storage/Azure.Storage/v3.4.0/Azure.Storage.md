@@ -4,9 +4,8 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: ./Azure.Storage.md
 Help Version:
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3fb654c881de55b6450
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
 ---
 
 # Azure.Storage Module

@@ -6,9 +6,8 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/677ffdf45032ab99717b67a40b256e149d6e58f3
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
 ---
 
 # AzureRM.Resources Module

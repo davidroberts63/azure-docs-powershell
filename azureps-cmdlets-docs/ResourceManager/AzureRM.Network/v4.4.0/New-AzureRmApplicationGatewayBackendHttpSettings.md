@@ -3,9 +3,8 @@ external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 Module Name: AzureRM.Network
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayBackendHttpSettings.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayBackendHttpSettings.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayBackendHttpSettings.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayBackendHttpSettings.md
 ---
 
 # New-AzureRmApplicationGatewayBackendHttpSettings
@@ -22,7 +21,7 @@ New-AzureRmApplicationGatewayBackendHttpSettings -Name <String> -Port <Int32> -P
  [-Probe <PSApplicationGatewayProbe>]
  [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
  [-PickHostNameFromBackendAddress] [-HostName <String>] [-AffinityCookieName <String>] [-ProbeEnabled]
- [-Path <String>] [<CommonParameters>]
+ [-Path <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +44,7 @@ The settings are stored in the $Setting variable.
 Cookie name to use for the affinity cookie
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +74,7 @@ Accept wildcard characters: False
 Connection draining of the backend http settings resource.
 
 ```yaml
-Type: PSApplicationGatewayConnectionDraining
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayConnectionDraining
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +89,7 @@ Accept wildcard characters: False
 Specifies whether cookie-based affinity should be enabled or disabled for the back-end server pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled
@@ -106,7 +105,7 @@ Accept wildcard characters: False
 Sets host header to be sent to the backend servers.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +120,7 @@ Accept wildcard characters: False
 Specifies the name of the back-end HTTP settings that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +136,7 @@ Path which should be used as a prefix for all HTTP requests.
 If no value is provided for this parameter, then no path will be prefixed.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +151,7 @@ Accept wildcard characters: False
 Flag if host header should be picked from the host name of the backend server.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +166,7 @@ Accept wildcard characters: False
 Specifies the port of the back-end server pool.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -182,7 +181,7 @@ Accept wildcard characters: False
 Specifies a probe to associate with the back-end server pool.
 
 ```yaml
-Type: PSApplicationGatewayProbe
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe
 Parameter Sets: (All)
 Aliases: 
 
@@ -197,7 +196,7 @@ Accept wildcard characters: False
 Flag if probe should be enabled.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -212,7 +211,7 @@ Accept wildcard characters: False
 Specifies the ID of the probe to associate with the back-end server pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -228,7 +227,7 @@ Specifies the protocol to use for communication between the application gateway 
 The acceptable values for this parameter are: Http and Https.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Http, Https
@@ -244,9 +243,22 @@ Accept wildcard characters: False
 Specifies a request time-out value.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

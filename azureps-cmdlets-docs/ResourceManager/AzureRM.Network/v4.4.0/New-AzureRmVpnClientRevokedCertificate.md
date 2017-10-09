@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: 973E1E53-983F-45A7-A7CF-18A8D96EC4E6
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientRevokedCertificate.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientRevokedCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientRevokedCertificate.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientRevokedCertificate.md
 ---
 
 # New-AzureRmVpnClientRevokedCertificate
@@ -17,7 +16,8 @@ Creates a new VPN client-revocation certificate.
 ## SYNTAX
 
 ```
-New-AzureRmVpnClientRevokedCertificate -Name <String> -Thumbprint <String> [<CommonParameters>]
+New-AzureRmVpnClientRevokedCertificate -Name <String> -Thumbprint <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +50,7 @@ This variable can then be used by the **New-AzureRmVirtualNetworkGateway** cmdle
 Specifies a unique name for the new client-revocation certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,11 +71,24 @@ You can return thumbprint information for your certificates by using a Windows P
 The preceding command returns information for all the Local Computer certificates found in the Root certificate store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

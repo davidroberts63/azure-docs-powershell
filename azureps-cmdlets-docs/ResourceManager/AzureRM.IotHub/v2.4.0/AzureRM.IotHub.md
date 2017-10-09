@@ -6,9 +6,8 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/AzureRM.IotHub.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/AzureRM.IotHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/04e47f8329ba9e64790c974f9666dbf41de7483f
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/AzureRM.IotHub.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/AzureRM.IotHub.md
 ---
 
 # AzureRM.IotHub Module

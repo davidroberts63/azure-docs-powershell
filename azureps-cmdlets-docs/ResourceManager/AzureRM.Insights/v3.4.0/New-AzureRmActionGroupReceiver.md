@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: 9830CD16-D797-47EB-BEF5-6CFE3454BCAA
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroupReceiver.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroupReceiver.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d3845f66589640e7d313bb472db3efc6a34d210e
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroupReceiver.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroupReceiver.md
 ---
 
 # New-AzureRmActionGroupReceiver
@@ -15,8 +15,22 @@ Creates an new action group receiver.
 
 ## SYNTAX
 
+### NewEmailReceiver (Default)
 ```
-New-AzureRmActionGroupReceiver -Type <String> -Name <String> [-EmailAddress <String>] [-CountryCode <String>] [-PhoneNumber <String>] [-ServiceUri <String>] [<CommonParameters>]
+New-AzureRmActionGroupReceiver -Name <String> [-EmailReceiver] -EmailAddress <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### NewSmsReceiver
+```
+New-AzureRmActionGroupReceiver -Name <String> [-SmsReceiver] [-CountryCode <String>] -PhoneNumber <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### NewWebhookReceiver
+```
+New-AzureRmActionGroupReceiver -Name <String> [-WebhookReceiver] -ServiceUri <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,26 +61,11 @@ This command creates a new webhook receiver in memory.
 
 ## PARAMETERS
 
-### -Type
-Specifies the type for the receiver.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name for the receiver.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,8 +80,8 @@ Accept wildcard characters: False
 Specifies the address for the Email receiver.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: NewEmailReceiver
 Aliases: 
 
 Required: True
@@ -96,11 +95,11 @@ Accept wildcard characters: False
 Specifies the country code for the SMS receiver.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: NewSmsReceiver
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -111,8 +110,8 @@ Accept wildcard characters: False
 Specifies the phone number for the SMS receiver.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: NewSmsReceiver
 Aliases: 
 
 Required: True
@@ -126,11 +125,63 @@ Accept wildcard characters: False
 Specifies the URI for the webhook receiver.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: NewWebhookReceiver
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailReceiver
+Create a email receiver```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: NewEmailReceiver
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmsReceiver
+Create a sms receiver```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: NewSmsReceiver
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WebhookReceiver
+Create a webhook receiver```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: NewWebhookReceiver
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

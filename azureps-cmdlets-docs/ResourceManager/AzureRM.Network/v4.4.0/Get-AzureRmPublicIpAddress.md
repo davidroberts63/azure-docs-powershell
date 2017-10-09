@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: 0CD03BF8-8DB6-44BC-91F0-D863949DBD17
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmPublicIpAddress.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmPublicIpAddress.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmPublicIpAddress.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmPublicIpAddress.md
 ---
 
 # Get-AzureRmPublicIpAddress
@@ -18,27 +17,28 @@ Gets a public IP address.
 
 ### NoExpandStandAloneIp (Default)
 ```
-Get-AzureRmPublicIpAddress [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
+Get-AzureRmPublicIpAddress [-Name <String>] [-ResourceGroupName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ExpandStandAloneIp
 ```
 Get-AzureRmPublicIpAddress -Name <String> -ResourceGroupName <String> -ExpandResource <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### NoExpandScaleSetIp
 ```
 Get-AzureRmPublicIpAddress [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
  [-VirtualMachineIndex <String>] [-NetworkInterfaceName <String>] [-IpConfigurationName <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ExpandScaleSetIp
 ```
 Get-AzureRmPublicIpAddress -Name <String> -ResourceGroupName <String> -VirtualMachineScaleSetName <String>
  -VirtualMachineIndex <String> -NetworkInterfaceName <String> -IpConfigurationName <String>
- -ExpandResource <String> [<CommonParameters>]
+ -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +57,7 @@ This command gets a public IP address resource with name $publicIPName in the re
 
 ### -ExpandResource
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandStandAloneIp, ExpandScaleSetIp
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ### -IpConfigurationName
 Network Interface IP Configuration Name.
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandScaleSetIp
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandScaleSetIp
 Aliases: 
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 Specifies the name of the public IP address that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandStandAloneIp, NoExpandScaleSetIp
 Aliases: ResourceName
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandStandAloneIp, ExpandScaleSetIp
 Aliases: ResourceName
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ### -NetworkInterfaceName
 Virtual Machine Network Interface Name.
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandScaleSetIp
 Aliases: 
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandScaleSetIp
 Aliases: 
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the public IP address that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandStandAloneIp
 Aliases: 
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandStandAloneIp, NoExpandScaleSetIp, ExpandScaleSetIp
 Aliases: 
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ### -VirtualMachineIndex
 Virtual Machine Index.
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandScaleSetIp
 Aliases: 
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandScaleSetIp
 Aliases: 
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ### -VirtualMachineScaleSetName
 Virtual Machine Scale Set Name.
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NoExpandScaleSetIp
 Aliases: 
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ExpandScaleSetIp
 Aliases: 
 
@@ -223,6 +223,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

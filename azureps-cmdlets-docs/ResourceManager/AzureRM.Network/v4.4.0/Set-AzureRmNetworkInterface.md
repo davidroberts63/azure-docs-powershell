@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: DDB38A77-E5C0-47DD-BADD-94488F661CD5
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkInterface.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkInterface.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/66ff7aae79d21e8503f3b1bdbf11915a7c4ed3ee
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkInterface.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkInterface.md
 ---
 
 # Set-AzureRmNetworkInterface
@@ -17,7 +16,8 @@ Sets the goal state for a network interface.
 ## SYNTAX
 
 ```
-Set-AzureRmNetworkInterface -NetworkInterface <PSNetworkInterface> [<CommonParameters>]
+Set-AzureRmNetworkInterface -NetworkInterface <PSNetworkInterface> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,7 +92,7 @@ The first command gets an existing network interface called NetworkInterface1 an
 Specifies a **NetworkInterface** object that represents the goal state for a network interface.
 
 ```yaml
-Type: PSNetworkInterface
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,6 +100,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

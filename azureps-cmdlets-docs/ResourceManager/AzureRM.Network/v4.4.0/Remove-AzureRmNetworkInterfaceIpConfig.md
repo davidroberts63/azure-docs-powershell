@@ -4,9 +4,8 @@ Module Name: AzureRM.Network
 ms.assetid: 015C7DB7-2B08-4033-9B6E-1738D4DDACDA
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkInterfaceIpConfig.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkInterfaceIpConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a25c903f9b7a79009b1a89b220d7bb3a7c379946
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkInterfaceIpConfig.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkInterfaceIpConfig.md
 ---
 
 # Remove-AzureRmNetworkInterfaceIpConfig
@@ -42,7 +41,7 @@ The first command gets a network interface called mynic and stores it in the var
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -57,7 +56,7 @@ Accept wildcard characters: False
 Specifies the name of the network interface IP configuration to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +72,7 @@ Specifies a **NetworkInterface** object.
 This object contains the network interface IP configuration to remove.
 
 ```yaml
-Type: PSNetworkInterface
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
 Parameter Sets: (All)
 Aliases: 
 

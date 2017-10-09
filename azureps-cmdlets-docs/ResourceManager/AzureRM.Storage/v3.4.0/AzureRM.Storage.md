@@ -6,9 +6,8 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
 ---
 
 # AzureRM.Storage Module

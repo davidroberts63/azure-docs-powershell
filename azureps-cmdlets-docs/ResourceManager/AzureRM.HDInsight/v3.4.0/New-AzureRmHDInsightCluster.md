@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: 691AC991-3249-487C-A0DF-C579ED7D00E7
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightCluster.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightCluster.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
+content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightCluster.md
+original_content_git_url: https://github.com/Visual-Studio-China/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightCluster.md
 ---
 
 # New-AzureRmHDInsightCluster
@@ -32,7 +32,8 @@ New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [
  [-VirtualNetworkId <String>] [-SubnetName <String>] [-OSType <OSType>] [-ClusterTier <Tier>]
  [-SshCredential <PSCredential>] [-SshPublicKey <String>] [-RdpCredential <PSCredential>]
  [-RdpAccessExpiry <DateTime>] [-ObjectId <Guid>] [-CertificatePassword <String>] [-AadTenantId <Guid>]
- [-SecurityProfile <AzureHDInsightSecurityProfile>] [<CommonParameters>]
+ [-SecurityProfile <AzureHDInsightSecurityProfile>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### CertificateFilePath
@@ -53,7 +54,7 @@ New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [
  [-SshCredential <PSCredential>] [-SshPublicKey <String>] [-RdpCredential <PSCredential>]
  [-RdpAccessExpiry <DateTime>] [-ObjectId <Guid>] [-CertificateFilePath <String>]
  [-CertificatePassword <String>] [-AadTenantId <Guid>] [-SecurityProfile <AzureHDInsightSecurityProfile>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### CertificateFileContents
@@ -74,7 +75,7 @@ New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [
  [-SshCredential <PSCredential>] [-SshPublicKey <String>] [-RdpCredential <PSCredential>]
  [-RdpAccessExpiry <DateTime>] [-ObjectId <Guid>] [-CertificateFileContents <Byte[]>]
  [-CertificatePassword <String>] [-AadTenantId <Guid>] [-SecurityProfile <AzureHDInsightSecurityProfile>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,6 +85,8 @@ The New-AzureHDInsightCluster creates an Azure HDInsight cluster by using the sp
 
 ### --------------------------  Example 1: Create an Azure HDInsight cluster  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -129,7 +132,7 @@ This command creates a cluster in the current subscription.
 Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -160,7 +163,7 @@ Accept wildcard characters: False
 Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: CertificateFileContents
 Aliases: 
 
@@ -176,7 +179,7 @@ Specifies the file path to the certificate that will be used to authenticate as 
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CertificateFilePath
 Aliases: 
 
@@ -192,7 +195,7 @@ Specifies the password for the certificate that will be used to authenticate as 
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -207,7 +210,7 @@ Accept wildcard characters: False
 Specifies the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -222,7 +225,7 @@ Accept wildcard characters: False
 Specifies the number of Worker nodes for the cluster.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -239,7 +242,7 @@ By default, this is Standard.
 The Premium tier can only be used with Linux clusters, and it enables the use of some new features.
 
 ```yaml
-Type: Tier
+Type: Microsoft.Azure.Management.HDInsight.Models.Tier
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Standard, Premium
@@ -256,7 +259,7 @@ Specifies the type of cluster to create.
 Options are: Hadoop, HBase, Storm, Spark
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -285,7 +288,7 @@ Specifies the cluster object to be used to create the cluster.
 This object can be created by using the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -317,7 +320,7 @@ Specifies the account key for the default Azure Storage account that the HDInsig
 You can alternatively use the Set-AzureRmHDInsightDefaultStorage cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -333,7 +336,7 @@ Specifies the name of the default Azure Storage account that the HDInsight clust
 You can alternatively use the Set-AzureRmHDInsightDefaultStorage cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -348,7 +351,7 @@ Accept wildcard characters: False
 Specifies the type of the default storage account that the HDInsight cluster will use. Possible values are AzureStorage and AzureDataLakeStore. Defaults to AzureStorage if not specified.
 
 ```yaml
-Type: StorageType
+Type: System.Nullable`1[Microsoft.Azure.Commands.HDInsight.Models.Management.StorageType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureStorage, AzureDataLakeStore
@@ -365,7 +368,7 @@ Specifies the name of the default container in the default Azure storage account
 You can alternatively use the Set-AzureRmHDInsightDefaultStorage cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -380,7 +383,7 @@ Accept wildcard characters: False
 Specifies the path-prefix in the Data Lake Store Account that the HDInsight cluster will use as the default filesystem.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -395,7 +398,7 @@ Accept wildcard characters: False
 Specifies the size of the virtual machine for the edge node. Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page. This parameter is valid only for RServer clusters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -411,7 +414,7 @@ Specifies the size of the virtual machine for the Head node.
 Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -427,7 +430,7 @@ Specifies the SQL Database to store Hive metadata.
 You can alternatively use the Add-AzureRmHDInsightMetastore cmdlet.
 
 ```yaml
-Type: AzureHDInsightMetastore
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightMetastore
 Parameter Sets: (All)
 Aliases: 
 
@@ -442,7 +445,7 @@ Accept wildcard characters: False
 Specifies the cluster login (HTTP) credentials for the cluster.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -457,7 +460,7 @@ Accept wildcard characters: False
 Specifies the location for the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -473,7 +476,7 @@ Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -489,7 +492,7 @@ Specifies the SQL Database to store Oozie metadata.
 You can alternatively use the Add-AzureRmHDInsightMetastore cmdlet.
 
 ```yaml
-Type: AzureHDInsightMetastore
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightMetastore
 Parameter Sets: (All)
 Aliases: 
 
@@ -505,7 +508,7 @@ Specifies the operating system for the cluster.
 Options are: Windows, Linux
 
 ```yaml
-Type: OSType
+Type: Microsoft.Azure.Management.HDInsight.Models.OSType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Windows, Linux
@@ -521,7 +524,7 @@ Accept wildcard characters: False
 Specifies the expiration, as a DateTime object, for Remote Desktop Protocol (RDP) access to a cluster.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -537,7 +540,7 @@ Specifies the Remote Desktop (RDP) credentials for the cluster.
 This is only for Windows clusters.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -552,7 +555,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -585,7 +588,7 @@ Specifies the security related properties used to create a secure cluster.
 You can alternatively use the Add-AzureRmHDInsightSecurityProfile cmdlet.
 
 ```yaml
-Type: AzureHDInsightSecurityProfile
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightSecurityProfile
 Parameter Sets: (All)
 Aliases: 
 
@@ -601,7 +604,7 @@ Specifies the SSH credential to be used for SSH connections.
 This is only for Linux clusters.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -617,7 +620,7 @@ Specifies the public key to be used for SSH connections.
 This is only for Linux clusters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -632,7 +635,7 @@ Accept wildcard characters: False
 Specifies the name of a subnet within the chosen virtual network for the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -647,7 +650,7 @@ Accept wildcard characters: False
 Specifies the HDI version of the HDInsight cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -662,7 +665,7 @@ Accept wildcard characters: False
 Specifies the ID of the virtual network into which to provision the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -678,7 +681,7 @@ Specifies the size of the virtual machine for the Worker node.
 Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -695,9 +698,22 @@ Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 This parameter is valid only for HBase or Storm clusters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -712,7 +728,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### AzureHDInsightConfig
-
 Parameter 'Config' accepts value of type 'AzureHDInsightConfig' from the pipeline
 
 ## OUTPUTS
